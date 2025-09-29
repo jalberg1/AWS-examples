@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+# check for bucket
+
+#if [ -z "$1"]; then
+echo "There needs to be bucket name retard"
+#exit 1
+
+#fi
+
+#access bucket name
+
+BUCKET_NAME="$1"
+
+#use the input var
+
+echo "input variable: $BUCKET_NAME"
+
+
+# https://docs.aws.amazon.com/cli/latest/reference/s3api/create-bucket.html
+
+
+aws s3api create-bucket \
+--bucket $BUCKET_NAME \
+
+# if issue --create-bucket-configuration="LocationConstraint=us-east-1"
+
